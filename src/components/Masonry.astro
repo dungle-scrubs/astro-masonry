@@ -93,6 +93,7 @@ const breakpointColsString =
 
   if (hasAstroViewTransitions()) {
     document.addEventListener("astro:page-load", initMasonry);
+    document.addEventListener("popstate", initMasonry);
   } else {
     if (document.readyState === "loading") {
       document.addEventListener("DOMContentLoaded", initMasonry);
